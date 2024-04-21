@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  database_mysql:
+    image: mysql:8
+    container_name: payments-import-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "payments-import"
+      MYSQL_DATABASE: "payments-import"
+      MYSQL_USER: "payments-import"
+      MYSQL_PASSWORD: "payments-import"
+    volumes:
+      - payments-import-data-base:/var/lib/mysql
+
+  app_php:
+    container_name: payments-import-app
+    build: .
+    depends_on:
+      - database_mysql
+    env_file: ./.env.local
+    image: app_php
+    ports:
+      - 5000:80
+    volumes:
+      - /tmp/composer:/root/.composer
+      - ./:/var/www/html/
+
+volumes:
+  payments-import-data-base:
