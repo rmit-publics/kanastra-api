@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "18f14bee-3326-48cf-8f3e-2fe628408381",
+		"name": "Public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2148738",
+		"_collection_link": "https://speeding-satellite-4189.postman.co/workspace/kanastra~ec5f7d77-e974-4eb4-8aa2-bda5899739df/collection/2148738-18f14bee-3326-48cf-8f3e-2fe628408381?action=share&source=collection_link&creator=2148738"
+	},
+	"item": [
+		{
+			"name": "healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}",
+					"host": [
+						"{{url_api}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Kayne/Downloads/input.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_api}}/upload",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list payments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_api}}/payments/3",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"payments",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
