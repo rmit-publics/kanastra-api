@@ -2,9 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Services\Billet\BilletXPTO;
 use Illuminate\Console\Command;
-use App\UseCases\SendPayment\SendPaymentUseCase;
+use App\Services\Billet\BilletXPTO;
+use App\UseCases\Payment\SendPaymentUseCase;
+
 
 class ProcessPaymentsCommand extends Command
 {

@@ -31,5 +31,6 @@ $router->group(['prefix' => 'api'],function() use ($router) {
     });
 
     $router->post('/upload', 'UploadPaymentController@store');
+    $router->get('/payments/{uploadId}', 'PaymentsController@list');
 
 });

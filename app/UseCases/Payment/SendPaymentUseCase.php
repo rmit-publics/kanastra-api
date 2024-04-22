@@ -1,11 +1,11 @@
 <?php
-namespace App\UseCases\SendPayment;
+namespace App\UseCases\Payment;
 
-use App\Mail\PaymentBilletCreate;
 use Exception;
 use App\Models\Payment;
-use App\Services\Billet\BilletInterface;
+use App\Mail\PaymentBilletCreate;
 use Illuminate\Support\Facades\Mail;
+use App\Services\Billet\BilletInterface;
 
 Class SendPaymentUseCase {
     protected $createBillet;

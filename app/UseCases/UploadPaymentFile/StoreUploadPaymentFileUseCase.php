@@ -2,9 +2,9 @@
 namespace App\UseCases\UploadPaymentFile;
 
 use App\Models\FileUpload;
-use App\UseCases\ProcessPayment\ProcessFilePaymentUseCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\UseCases\Payment\ProcessFilePaymentUseCase;
 
 Class StoreUploadPaymentFileUseCase {
 

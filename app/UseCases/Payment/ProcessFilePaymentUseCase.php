@@ -1,5 +1,5 @@
 <?php
-namespace App\UseCases\ProcessPayment;
+namespace App\UseCases\Payment;
 
 use App\Models\FileUpload;
 use App\Models\Payment;
