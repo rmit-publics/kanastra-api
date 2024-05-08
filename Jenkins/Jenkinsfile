@@ -1,0 +1,10 @@
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent {
+                docker { image: 'php:8.1.9-apache'}
+            }
+        }
+    }
+}
